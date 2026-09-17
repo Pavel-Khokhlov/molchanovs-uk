@@ -42,7 +42,7 @@ export const Hero = () => {
       <div className="hero__content">
         <span className="hero__eyebrow">Freediving</span>
         <h1 className="hero__title">
-          LONDON
+          LONDON Goodby
           <br />
           Breathe deeper
         </h1>
