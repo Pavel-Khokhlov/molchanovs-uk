@@ -1,0 +1,170 @@
+@use "variables" as *;
+
+// Адаптив
+@mixin respond-to($bp) {
+  @if $bp == mobile {
+    @media (max-width: $bp-mobile) {
+      @content;
+    }
+  } @else if $bp == tablet {
+    @media (max-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $bp == desktop {
+    @media (max-width: $bp-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin simbol($symbol: "✓") {
+  content: $symbol;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-brand);
+  line-height: 1.2;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}
+
+@mixin matte-glass {
+  border: 1px solid rgba(var(--color-accent-rgb), 0.1);
+  box-shadow: 0px 10px 50px -15px rgba(var(--primary-black-rgb), 0);
+}
+
+@mixin matte-glass-active {
+  background: rgba(var(--color-ocean-rgb), 0.5);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+}
+
+@mixin filter-blur {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+@mixin filter-blur-saturate {
+  -webkit-backdrop-filter: blur(6px) saturate(1.2);
+  backdrop-filter: blur(6px) saturate(1.2);
+}
+
+@mixin title-gd-text {
+  background: linear-gradient(135deg, var(--primary-white) 0%, #b0dfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: min(50px, 8vw);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(0, 40, 80, 0.3);
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 min(50px, 10vw);
+}
+
+@mixin list-main {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  flex: 1;
+}
+
+@mixin checklist-item {
+  padding: 0.4rem 0 0.4rem 1.75rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: #d4e8f5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+
+  &.start {
+    text-align: start;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &::before {
+    @include simbol;
+  }
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Кнопка базовая
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-xs;
+  padding: 0.85rem 0;
+  font-family: $font-main;
+  font-size: $fs-base;
+  font-weight: 600;
+  border: none;
+  border-radius: $radius-full;
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+  white-space: nowrap;
+  width: min(300px, 70vw)
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Overlay (градиент поверх фото)
+@mixin overlay-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 14, 26, 0.4) 0%,
+    rgba(10, 14, 26, 0.75) 100%
+  );
+}
+// Стеклянная поверхность
+@mixin glass {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid $color-border;
+}
+// Плавное появление
+@mixin fade-in($duration: $transition-slow) {
+  animation: fadeIn $duration forwards;
+}

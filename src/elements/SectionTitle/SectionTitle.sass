@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *
+@use '../../styles/mixins' as *
+
+.section-title
+    max-width: 680px
+    margin-bottom: $sp-xl
+
+&__eyebrow
+    display: inline-block
+    font-size: $fs-sm
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.15em
+    color: $color-accent
+    margin-bottom: $sp-sm
+
+&__title
+    +heading($fs-3xl)
+    // @include respond-to(mobile)
+    font-size: $fs-2xl
+
+&__subtitle
+    margin-top: $sp-md
+    color: $color-text-muted
+    font-size: $fs-lg

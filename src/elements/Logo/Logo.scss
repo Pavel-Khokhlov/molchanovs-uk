@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: $color-text;
+  font-family: $font-display;
+  font-weight: 800;
+  font-size: $fs-lg;
+  letter-spacing: 0.05em;
+
+  &__text {
+    font-family: $font-brand;
+    color: $color-text;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
+}

@@ -1,0 +1,40 @@
+.burger {
+  @include flex-col;
+  display: none;
+  gap: 6px;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 110;
+  @media (orientation: portrait) and (max-width: 700px) and (pointer: coarse) {
+    display: flex;
+  }
+}
+
+.burger__line {
+  width: 30px;
+  height: 1px;
+  border-radius: 1px;
+  background: $color-text;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  &._active {
+    transition: all 0.3s ease;
+  }
+}
+
+/* ИДЕАЛЬНЫЙ крестик */
+.burger._active .burger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger._active .burger__line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger._active .burger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}

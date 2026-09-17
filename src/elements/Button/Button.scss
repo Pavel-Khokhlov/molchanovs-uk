@@ -1,0 +1,33 @@
+.btn {
+  @include button-base;
+
+  &--primary {
+    // background: $color-accent;
+    background-image: linear-gradient(
+      to right,
+      #1a2980 0%,
+      #26d0ce 51%,
+      #1a2980 100%
+    );
+    // background: #000428;
+    // background: linear-gradient(to right, #000428, #004e92);
+    color: $color-text;
+    background-size: 200% auto;
+    // color: $color-text;
+    &:hover {
+      background-position: right center;
+      // color: #fff;
+      // background: $color-accent-hover;
+      // box-shadow: 0 5px 20px rgba(0, 212, 255, 0.35);
+    }
+  }
+  &--ghost {
+    background: transparent;
+    color: $color-text;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+}
