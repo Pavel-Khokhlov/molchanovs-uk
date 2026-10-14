@@ -1,10 +1,10 @@
-import { useEffect } from "react";
-import { useHeroStore } from "../../store/useHeroStore";
-import { Button } from "../../elements/Button/Button";
+import { useEffect } from 'react';
+import { useHeroStore } from '../../store/useHeroStore';
+import { Button } from '../../elements/Button/Button';
 
-import "./Hero.scss";
+import './Hero.scss';
 
-export const Hero = () => {
+const Hero = () => {
   const { slides, activeIndex, nextSlide } = useHeroStore();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const Hero = () => {
           <div
             key={slide.id}
             className={`hero__slide ${
-              i === activeIndex ? "hero__slide--active" : ""
+              i === activeIndex ? 'hero__slide--active' : ''
             }`}
             aria-label={slide.alt}
           >
@@ -28,8 +28,8 @@ export const Hero = () => {
               <img
                 src={slide.image}
                 alt={slide.alt}
-                loading={i === 0 ? "eager" : "lazy"}
-                fetchPriority={i === 0 ? "high" : "auto"}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchPriority={i === 0 ? 'high' : 'auto'}
                 decoding="async"
               />
             </picture>
@@ -47,13 +47,12 @@ export const Hero = () => {
           Breathe deeper
         </h1>
         <p className="hero__subtitle">
-          Training sessions in the pool and trips to open water. Individual approach, safety and comfort on every dive.
+          Training sessions in the pool and trips to open water. Individual
+          approach, safety and comfort on every dive.
         </p>
         <div className="hero__actions">
           <Button href="#contact">Contact with me</Button>
-          <Button variant="ghost">
-            Learn more...
-          </Button>
+          <Button variant="ghost">Learn more...</Button>
         </div>
       </div>
 
@@ -61,10 +60,12 @@ export const Hero = () => {
         {slides.map((s, i) => (
           <span
             key={s.id}
-            className={`hero__dot ${i === activeIndex ? "hero__dot--active" : ""}`}
+            className={`hero__dot ${i === activeIndex ? 'hero__dot--active' : ''}`}
           />
         ))}
       </div>
     </section>
   );
 };
+
+export default Hero;

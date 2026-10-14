@@ -4,8 +4,9 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: $sp-md;
+  padding: 10px 15px;
   transition: background $transition-base;
+  background: $bg-menu;
 
   &--open {
     // background: $color-bg;

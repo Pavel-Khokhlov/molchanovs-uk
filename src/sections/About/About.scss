@@ -1,0 +1,170 @@
+// Переменные (адаптируйте под ваш проект)
+$color-primary: #4fa3c7; // Синий цвет с картинки
+$color-bg-light: #f4f6f8; // Светло-серый фон
+$color-text-dark: #2c3e50;
+$color-text-gray: #6b7c8d;
+$color-white: #ffffff;
+
+.about {
+  position: relative;
+  background-color: $color-bg-light;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  // Верхняя волнистая часть, чтобы сгладить переход от слайдера
+  &__wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 390px;
+    // Форма волны через clip-path (можно заменить на SVG для идеальной плавности)
+    clip-path: ellipse(100% 100% at 40% 0%);
+    z-index: 0;
+
+    // Если слайдер темный, можно добавить градиент
+    background: -webkit-linear-gradient(90deg, #a7be8e, #067988, #32264e);
+    background: linear-gradient(90deg, #a7be8e, #067988, #32264e);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-top: 100px; // Отступ сверху, чтобы текст не залезал на волну
+    color: $color-white;
+
+    // Если фон под заголовком синий (как на волне), текст белый
+    // Если вы хотите заголовок на сером фоне, уберите color: white и padding-top
+    @media (max-width: 768px) {
+      padding-top: 60px;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+
+    // Тень для читаемости на синем фоне
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    opacity: 1;
+    letter-spacing: 0.5px;
+    &-strong {
+      font-weight: 700;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Карточка
+.feature-card {
+  // Основа — белая карточка, много воздуха
+  background: $color-white;
+  padding: 32px 28px 20px; // нулевой паддинг снизу для «выглядывающего» изображения
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  // Картинка внизу карточки
+  &__image {
+    width: 100%;
+    margin-top: auto;
+
+    img {
+      max-width: 50%;
+      height: auto;
+      object-fit: contain;
+      // тень под изображением, как у Apple
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem; // крупнее, чем было
+    font-weight: 700;
+    color: $color-text-dark;
+    margin-bottom: 8px;
+    text-transform: none; // Apple не использует uppercase для таких заголовков
+    line-height: 1.2;
+  }
+
+  // Небольшой надзаголовок над крупным заголовком
+  &__eyebrow {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $color-text-gray;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $color-text-gray;
+    margin: 0 0 12px;
+    text-align: start;
+  }
+
+  // Кнопка-иконка в правом нижнем углу
+  &__cta {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    color: $color-text-dark;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

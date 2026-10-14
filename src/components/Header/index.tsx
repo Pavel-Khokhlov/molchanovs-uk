@@ -1,10 +1,11 @@
 import { useUIStore } from '../../store/useUIStore';
 import { Logo } from '../../elements/Logo/Logo';
-import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
+import BurgerMenu from '@/components/BurgerMenu';
 
 import './Header.scss';
 
 const NAV_LINKS = [
+  { label: 'Main', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Team', href: '#team' },
   { label: 'Pool', href: '#pool' },
@@ -12,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Contacts', href: '#contact' },
 ];
 
-export const Header = () => {
+const Header = () => {
   const { isMenuOpen, toggleMenu } = useUIStore();
 
   return (
@@ -51,3 +52,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

@@ -1,13 +1,13 @@
-import "./BurgerMenu.scss";
+import './BurgerMenu.scss';
 
 interface Props {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-export const BurgerMenu = ({ isOpen, onToggle }: Props) => (
+const BurgerMenu = ({ isOpen, onToggle }: Props) => (
   <button
-    className={`burger ${isOpen ? "_active" : ""}`}
+    className={`burger ${isOpen ? '_active' : ''}`}
     onClick={onToggle}
     aria-label="Menu"
   >
@@ -16,3 +16,5 @@ export const BurgerMenu = ({ isOpen, onToggle }: Props) => (
     <span className="burger__line" />
   </button>
 );
+
+export default BurgerMenu;
