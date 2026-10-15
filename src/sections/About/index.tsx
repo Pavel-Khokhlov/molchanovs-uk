@@ -1,3 +1,4 @@
+import socials from '@/assets/images/features';
 import './About.scss';
 
 // Иконки можно заменить на ваши SVG или компоненты
@@ -7,7 +8,7 @@ const features = [
     eyebrow: 'Health',
     title: 'Love it. Breathe it.',
     text: 'Freediving increases vital lung capacity and strengthens the respiratory muscles.',
-    image: 'src/assets/images/features/breath.png',
+    image: 'breath',
     icon: '→',
   },
   {
@@ -15,7 +16,7 @@ const features = [
     eyebrow: 'Anti-Stress',
     title: 'Reset your mind.',
     text: 'The body resets, and even after the hardest day, the desire to live returns.',
-    image: 'src/assets/images/features/brain2.png',
+    image: 'brain',
     icon: '+',
   },
   {
@@ -23,7 +24,7 @@ const features = [
     eyebrow: 'Fitness',
     title: 'Train without the strain.',
     text: 'As effective as active fitness training — but softer and safer for the body.',
-    image: 'src/assets/images/features/fitness.png',
+    image: 'fitness',
     icon: '+',
   },
   {
@@ -31,7 +32,7 @@ const features = [
     eyebrow: 'Endurance',
     title: 'Built for more.',
     text: 'An organism adapted to low oxygen and high CO₂ handles everyday loads with ease.',
-    image: 'src/assets/images/features/o2.png',
+    image: 'endurance',
     icon: '→',
   },
   {
@@ -39,7 +40,7 @@ const features = [
     eyebrow: 'Hardening',
     title: 'Comfort in the cold.',
     text: 'Regular swimming and diving harden the body gently — no ice baths required.',
-    image: 'src/assets/images/features/hardening.png',
+    image: 'hardening',
     icon: '+',
   },
   {
@@ -47,7 +48,7 @@ const features = [
     eyebrow: 'Meditation',
     title: 'Just you and the water.',
     text: 'A rare chance to be alone with yourself in our information-overloaded world.',
-    image: 'src/assets/images/features/meditation2.png',
+    image: 'meditation',
     icon: '→',
   },
 ];
@@ -84,7 +85,7 @@ const About = () => {
               <h3 className="feature-card__title">{item.title}</h3>
               <p className="feature-card__text">{item.text}</p>
               <div className="feature-card__image">
-                <img src={item.image} alt={item.title} />
+                <img src={socials[item.image]} alt={item.title} />
               </div>
               {/* <div className="feature-card__cta">
                 {item.id === 1 ? '→' : '+'}

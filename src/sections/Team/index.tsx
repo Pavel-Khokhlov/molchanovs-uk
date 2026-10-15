@@ -1,4 +1,5 @@
 import Socials from '@/components/Social';
+import avatarImage from '@/assets/images/molchanovs.webp';
 
 import './Team.scss';
 
@@ -15,16 +16,15 @@ const Team = () => {
         </p>
       </div>
       <div className="employee-card">
-        <div className="employee-card__header">
-          {/* <div className="employee-card__avatar">
-            <img src={OxanaImg} alt="Photo Oxana Molchanova" />
-          </div> */}
-        </div>
+        <div
+          className="employee-card__header"
+          style={{ backgroundImage: `url(${avatarImage})` }}
+        />
 
         <div className="employee-card__body">
           <h3 className="employee-card__name">Oxana Molchanova</h3>
 
-          <Socials variant='_card'/>
+          <Socials variant="_card" />
 
           <p className="employee-card__bio">Freediving Instructors for:</p>
           <p className="employee-card__bio margin">
