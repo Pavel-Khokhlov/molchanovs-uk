@@ -1,0 +1,43 @@
+.socials {
+  &__list {
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    &._card {
+      display: flex;
+      justify-content: center;
+    }
+    &._footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      @media (max-width: $bp-mobile) {
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+  }
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+  }
+  &__name {
+    color: $color-white;
+    opacity: 0.5;
+    font-size: 14px;
+    @media (max-width: $bp-mobile) {
+      display: none;
+    }
+  }
+  &__icon {
+    width: 24px;
+    &._card {
+      width: 30px;
+    }
+  }
+}

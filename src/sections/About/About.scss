@@ -3,7 +3,6 @@ $color-primary: #4fa3c7; // Синий цвет с картинки
 $color-bg-light: #f4f6f8; // Светло-серый фон
 $color-text-dark: #2c3e50;
 $color-text-gray: #6b7c8d;
-$color-white: #ffffff;
 
 .about {
   position: relative;
@@ -96,7 +95,9 @@ $color-white: #ffffff;
   padding: 32px 28px 20px; // нулевой паддинг снизу для «выглядывающего» изображения
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -114,11 +115,14 @@ $color-white: #ffffff;
     margin-top: auto;
 
     img {
-      max-width: 50%;
+      width: 40%;
       height: auto;
       object-fit: contain;
       // тень под изображением, как у Apple
       filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+      @media (max-width: $bp-mobile) {
+        width: 30%;
+      }
     }
   }
 

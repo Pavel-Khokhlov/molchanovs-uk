@@ -8,10 +8,6 @@
   transition: background $transition-base;
   background: $bg-menu;
 
-  &--open {
-    // background: $color-bg;
-  }
-
   &__inner {
     @include flex-between;
     max-width: 1280px;
@@ -87,7 +83,7 @@
     box-sizing: border-box;
     opacity: 0;
 
-    &--open {
+    &._open {
       transform: translateX(0);
       opacity: 1;
     }

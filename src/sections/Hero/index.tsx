@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useHeroStore } from '../../store/useHeroStore';
-import { Button } from '../../elements/Button/Button';
+import { useHeroStore } from '@/store/useHeroStore';
+import { Button } from '@/elements/Button/Button';
 
 import './Hero.scss';
 
@@ -52,7 +52,7 @@ const Hero = () => {
         </p>
         <div className="hero__actions">
           <Button href="#contact">Contact with me</Button>
-          <Button variant="ghost">Learn more...</Button>
+          <Button href="#about" variant="ghost">Learn more...</Button>
         </div>
       </div>
 
