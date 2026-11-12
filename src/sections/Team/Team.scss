@@ -8,7 +8,7 @@
   }
 
   &__title {
-    font-size: clamp(2.5rem, 3vw, 3.5rem);
+    font-size: clamp(2.3rem, 3vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 1.2;
@@ -23,131 +23,34 @@
     margin: 0;
     padding: 0 20px;
   }
-}
 
-.employee-card {
-  --card-radius: 28px;
-
-  width: min(500px, 90%);
-  margin: 0 auto;
-  background: $color-white;
-  border-radius: var(--card-radius);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  // === Шапка с градиентом и волной ===
-  &__header {
-    position: relative;
-    height: 250px;
-    color: var(--wave-color);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    transition: $transition-base;
-  }
-
-  &:hover .employee-card__header {
-    transition: $transition-base;
-    background-size: 110%; // мягкий зум
-  }
-
-  // === Аватар ===
-  &__avatar {
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 2;
-    // тень «выныривания»
-    box-shadow:
-      0 10px 25px rgba(0, 0, 0, 0.18),
-      0 0 0 4px rgba(255, 255, 255, 0.35);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
-
-  // === Волнистый переход ===
-  &__wave {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px; // убираем щель между SVG и белым фоном
-    width: 100%;
-    height: 40px;
-    display: block;
-  }
-
-  // === Текстовая часть ===
-  &__body {
-    padding: 32px 28px 36px;
-  }
-
-  &__name {
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #2c2c2c;
-    margin: 0 0 6px;
-  }
-
-  &__handle {
-    font-size: 0.8rem;
-    color: #9aa0a6;
-    margin: 0 0 20px;
-  }
-
-  &__socials {
-    display: flex;
-    justify-content: center;
-    gap: 22px;
+  &__list {
     list-style: none;
+    width: min(1224px, 90vw);
     padding: 0;
-    margin: 0 0 22px;
+    margin: 0 auto;
 
-    a {
-      color: #1a1a1a;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: color 0.2s ease;
+    display: grid;
+    gap: 24px;
 
-      &:hover {
-        color: var(--header-from);
-      }
+    // 📱 Телефон (по умолчанию — mobile-first): 1 колонка
+    grid-template-columns: 1fr;
+
+    // 📱 Планшет: 2 колонки
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
     }
-  }
 
-  &__icons {
-    width: 25px;
-  }
-
-  &__bio {
-    font-size: min(18px, 4vw);
-    line-height: 1.4;
-    color: #8a8f94;
-    &.margin {
-      margin-bottom: 10px;
+    // 🖥️ Десктоп: 3 колонки (или 4 — по вкусу)
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
     }
-  }
 
-  &__role {
-    font-size: min(24px, 4.5vw);
-    line-height: 1.3;
-    color: #b0b4b8;
-    margin: 0;
-    &.margin {
-      margin-bottom: 10px;
+    // 🖥️ Большой десктоп (опционально): 4 колонки
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

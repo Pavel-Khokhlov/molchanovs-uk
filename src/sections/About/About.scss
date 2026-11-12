@@ -60,7 +60,7 @@ $color-text-gray: #6b7c8d;
   }
 
   &__subtitle {
-    font-size: 1.1rem;
+    font-size: min(20px, 3.5vw);
     font-weight: 300;
     line-height: 1.6;
     max-width: 800px;
