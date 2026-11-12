@@ -1,4 +1,5 @@
 import { Employee } from '@/data/employees';
+import LogosImg from "@/assets/images/logos";
 
 import './Card.scss';
 
@@ -9,7 +10,7 @@ const EmployeeCard = ({
   stage,
   role,
 }: Omit<Employee, 'id'>) => {
-  const stageImg = `./src/assets/images/logos/${stage}.webp`;
+  const stageImg = LogosImg[stage as keyof typeof LogosImg];
   return (
     <li className="card">
       <div
