@@ -18,33 +18,65 @@ export const useHeroStore = create<HeroState>((set, get) => ({
     {
       id: 1,
       image:
-        'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80',
+        '/src/assets/images/hero/desktop1.webp',
       mobileImage:
-        'https://i.pinimg.com/originals/9a/61/7d/9a617daac03aaee102ff5fe1d4d76604.jpg?nii=t',
+        '/src/assets/images/hero/mobile1.webp',
       alt: 'Freediver in deep blue',
     },
     {
       id: 2,
       image:
-        'https://images.unsplash.com/photo-1682686581551-867e0b208bd1?w=1920&q=80',
+        '/src/assets/images/hero/desktop2.webp',
       mobileImage:
-        'https://i.pinimg.com/736x/66/08/ff/6608ff3e358775915597f24ddaa9c905.jpg',
+        '/src/assets/images/hero/mobile2.webp',
       alt: 'Underwater light',
     },
     {
       id: 3,
       image:
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80',
+        '/src/assets/images/hero/desktop3.webp',
       mobileImage:
-        'https://i.pinimg.com/originals/0b/e4/f4/0be4f4b93b0dceea8aac00ceff0c2079.jpg',
+        '/src/assets/images/hero/mobile3.webp',
       alt: 'Ocean surface',
     },
     {
       id: 4,
       image:
-        'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=1920&q=80',
+        '/src/assets/images/hero/desktop4.webp',
       mobileImage:
-        'https://i.pinimg.com/originals/33/df/59/33df59da3df7f6571e7d95334c91a443.jpg',
+        '/src/assets/images/hero/mobile4.webp',
+      alt: 'Diver silhouette',
+    },
+    {
+      id: 5,
+      image:
+        '/src/assets/images/hero/desktop5.webp',
+      mobileImage:
+        '/src/assets/images/hero/mobile5.webp',
+      alt: 'Diver silhouette',
+    },
+    {
+      id: 6,
+      image:
+        '/src/assets/images/hero/desktop6.webp',
+      mobileImage:
+        '/src/assets/images/hero/mobile6.webp',
+      alt: 'Diver silhouette',
+    },
+    {
+      id: 7,
+      image:
+        '/src/assets/images/hero/desktop7.webp',
+      mobileImage:
+        '/src/assets/images/hero/mobile7.webp',
+      alt: 'Diver silhouette',
+    },
+    {
+      id: 8,
+      image:
+        '/src/assets/images/hero/desktop8.webp',
+      mobileImage:
+        '/src/assets/images/hero/mobile8.webp',
       alt: 'Diver silhouette',
     },
   ],

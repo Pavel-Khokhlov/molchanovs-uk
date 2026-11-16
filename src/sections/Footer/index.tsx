@@ -28,7 +28,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <span className="footer__meta">
-          {startYear} – {currentYear} All rights reserved
+          @{startYear} – {currentYear} All rights reserved
         </span>
         <span className="footer__meta">
           Version: <span>{import.meta.env.VITE_APP_VERSION}</span>
