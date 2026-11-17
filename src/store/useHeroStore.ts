@@ -18,65 +18,73 @@ export const useHeroStore = create<HeroState>((set, get) => ({
     {
       id: 1,
       image:
-        '/src/assets/images/hero/desktop1.webp',
+        '/images/hero/desktop1.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile1.webp',
+        '/images/hero/mobile1.webp',
       alt: 'Freediver in deep blue',
     },
     {
       id: 2,
       image:
-        '/src/assets/images/hero/desktop2.webp',
+        '/images/hero/desktop2.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile2.webp',
+        '/images/hero/mobile2.webp',
       alt: 'Underwater light',
     },
     {
       id: 3,
       image:
-        '/src/assets/images/hero/desktop3.webp',
+        '/images/hero/desktop3.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile3.webp',
+        '/images/hero/mobile3.webp',
       alt: 'Ocean surface',
     },
     {
       id: 4,
       image:
-        '/src/assets/images/hero/desktop4.webp',
+        '/images/hero/desktop4.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile4.webp',
+        '/images/hero/mobile4.webp',
       alt: 'Diver silhouette',
     },
     {
       id: 5,
       image:
-        '/src/assets/images/hero/desktop5.webp',
+        '/images/hero/desktop5.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile5.webp',
+        '/images/hero/mobile5.webp',
       alt: 'Diver silhouette',
     },
     {
       id: 6,
       image:
-        '/src/assets/images/hero/desktop6.webp',
+        '/images/hero/desktop6.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile6.webp',
+        '/images/hero/mobile6.webp',
       alt: 'Diver silhouette',
     },
     {
       id: 7,
       image:
-        '/src/assets/images/hero/desktop7.webp',
+        '/images/hero/desktop7.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile7.webp',
+        '/images/hero/mobile7.webp',
       alt: 'Diver silhouette',
     },
     {
       id: 8,
       image:
-        '/src/assets/images/hero/desktop8.webp',
+        '/images/hero/desktop8.webp',
       mobileImage:
-        '/src/assets/images/hero/mobile8.webp',
+        '/images/hero/mobile8.webp',
+      alt: 'Diver silhouette',
+    },
+    {
+      id: 9,
+      image:
+        '/images/hero/desktop9.webp',
+      mobileImage:
+        '/images/hero/mobile9.webp',
       alt: 'Diver silhouette',
     },
   ],
